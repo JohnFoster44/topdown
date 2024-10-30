@@ -1,0 +1,18 @@
+# Godot-specific ignores
+.import/
+.export/
+export.cfg
+export_presets.cfg
+
+# Godot editor files
+.godot/
+
+# OS-specific ignores
+.DS_Store
+Thumbs.db
+
+# General ignores
+*.tmp
+*.log
+*.bak
+*.swp

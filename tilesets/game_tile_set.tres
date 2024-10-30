@@ -1,0 +1,30 @@
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://ct6fx4mqbmlhb"]
+
+[ext_resource type="Texture2D" uid="uid://cv5dr7c2l2ndc" path="res://assets/tiles/water_ani.png" id="1_p80ss"]
+[ext_resource type="Texture2D" uid="uid://cfyx5lahh0j3r" path="res://assets/tiles/grass.png" id="2_cs6r5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tycxb"]
+texture = ExtResource("1_p80ss")
+texture_region_size = Vector2i(32, 32)
+0:0/animation_columns = 4
+0:0/animation_frame_0/duration = 0.5
+0:0/animation_frame_1/duration = 0.5
+0:0/animation_frame_2/duration = 0.5
+0:0/animation_frame_3/duration = 0.5
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hwc5d"]
+texture = ExtResource("2_cs6r5")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/terrains_peering_bit/left_side = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Grass"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/2 = SubResource("TileSetAtlasSource_tycxb")
+sources/3 = SubResource("TileSetAtlasSource_hwc5d")
