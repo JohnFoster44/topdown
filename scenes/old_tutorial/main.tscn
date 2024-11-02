@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dglamifhkcr5p" path="res://assets/old_tutorial_tilesets/TX Tileset Grass.png" id="1_t2503"]
 [ext_resource type="Texture2D" uid="uid://dvnnd8xhmdmoy" path="res://assets/old_tutorial_tilesets/TX Props.png" id="2_mho6c"]
-[ext_resource type="PackedScene" uid="uid://bwsj1m5wffyqn" path="res://scenes/player.tscn" id="2_t68ib"]
+[ext_resource type="PackedScene" uid="uid://bwsj1m5wffyqn" path="res://scenes/old_tutorial/player.tscn" id="2_t68ib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oluxo"]
 texture = ExtResource("1_t2503")

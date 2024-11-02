@@ -1,45 +1,39 @@
 extends NodeState
 
-@export var player: CharacterBody2D
+@export var player: Player
 @export var animated_sprite_2d: AnimatedSprite2D
-
-var direction: Vector2
 
 func _on_process(_delta: float) -> void:
 	pass
 
 
 func _on_physics_process(_delta: float) -> void:
-	if Input.is_action_pressed("up"):
-		direction = Vector2.UP
-	elif Input.is_action_pressed("down"):
-		direction = Vector2.DOWN
-	elif Input.is_action_pressed("left"):
-		direction = Vector2.LEFT
-	elif Input.is_action_pressed("right"):
-		direction = Vector2.RIGHT
-	else:
-		direction = Vector2.ZERO
-		
-	if direction == Vector2.UP:
-		# idle back
-		animated_sprite_2d.play("idle")
-	elif direction == Vector2.DOWN:
-		# idle front
-		animated_sprite_2d.play("idle")
-	elif direction == Vector2.LEFT:
+	
+	if player.player_direction == Vector2.UP:
+		# idle up
+		animated_sprite_2d.play("idle_up")
+	elif player.player_direction == Vector2.DOWN:
+		# idle down
+		animated_sprite_2d.play("idle_down")
+	elif player.player_direction == Vector2.LEFT:
 		# idle left
-		animated_sprite_2d.play("idle")
-	elif direction == Vector2.RIGHT:
+		animated_sprite_2d.play("idle_left")
+	elif player.player_direction == Vector2.RIGHT:
 		# idle right
-		animated_sprite_2d.play("idle")
+		animated_sprite_2d.play("idle_right")
 	else:
 		# idle front
-		animated_sprite_2d.play("idle")
+		animated_sprite_2d.play("idle_down")
 
 
 func _on_next_transitions() -> void:
-	pass
+	GameInputEvents.movement_input()
+
+	if GameInputEvents.is_movement_input():
+		transition.emit("Walk")
+
+	if player.current_attack == DataTypes.Attacks.Smack:
+		transition.emit("Attack")
 
 
 func _on_enter() -> void:
@@ -47,4 +41,4 @@ func _on_enter() -> void:
 
 
 func _on_exit() -> void:
-	pass
+	animated_sprite_2d.stop()

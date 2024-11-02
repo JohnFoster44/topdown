@@ -18,3 +18,4 @@ tile_set = ExtResource("1_qrplt")
 
 [node name="Player" parent="." instance=ExtResource("2_43b1k")]
 position = Vector2(333, 141)
+current_attack = 0
