@@ -27,18 +27,18 @@ func _on_physics_process(_delta: float) -> void:
 
 
 func _on_next_transitions() -> void:
+	# get movement input from GameInputEvents.
 	GameInputEvents.movement_input()
-
+	# if there is movement input then transition to walk state.
 	if GameInputEvents.is_movement_input():
 		transition.emit("Walk")
-
+	# if there is attack input then transition to attack state.
 	if player.current_attack == DataTypes.Attacks.Smack:
 		transition.emit("Attack")
 
 
 func _on_enter() -> void:
 	pass
-
 
 func _on_exit() -> void:
 	animated_sprite_2d.stop()

@@ -28,6 +28,7 @@ func _on_physics_process(_delta: float) -> void:
 
 
 func _on_next_transitions() -> void:
+	# if there is no movement input then transition to idle state.
 	if !GameInputEvents.is_movement_input():
 		transition.emit("Idle")
 
