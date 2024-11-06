@@ -33,7 +33,7 @@ func _on_next_transitions() -> void:
 	if GameInputEvents.is_movement_input():
 		transition.emit("Walk")
 	# if there is attack input then transition to attack state.
-	if player.current_attack == DataTypes.Attacks.Smack:
+	if player.current_attack == DataTypes.Attacks.Smack && GameInputEvents.use_attack():
 		transition.emit("Attack")
 
 

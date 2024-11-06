@@ -21,3 +21,9 @@ static func is_movement_input() -> bool:
 		return false
 	else:
 		return true
+
+
+static func use_attack() -> bool:
+	var use_attack_value: bool = Input.is_action_just_pressed("attack")
+	
+	return use_attack_value

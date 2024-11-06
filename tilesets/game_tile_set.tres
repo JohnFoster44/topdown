@@ -1,7 +1,12 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://ct6fx4mqbmlhb"]
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://ct6fx4mqbmlhb"]
 
 [ext_resource type="Texture2D" uid="uid://cv5dr7c2l2ndc" path="res://assets/tiles/water_ani.png" id="1_p80ss"]
+[ext_resource type="PackedScene" uid="uid://t45dtjv2ltce" path="res://scenes/objects/box/box.tscn" id="1_shdco"]
 [ext_resource type="Texture2D" uid="uid://cfyx5lahh0j3r" path="res://assets/tiles/grass.png" id="2_cs6r5"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_6184f"]
+resource_name = "Scene Collection"
+scenes/1/scene = ExtResource("1_shdco")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tycxb"]
 texture = ExtResource("1_p80ss")
@@ -26,5 +31,7 @@ tile_size = Vector2i(32, 32)
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "Grass"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+terrain_set_1/mode = 0
 sources/2 = SubResource("TileSetAtlasSource_tycxb")
 sources/3 = SubResource("TileSetAtlasSource_hwc5d")
+sources/0 = SubResource("TileSetScenesCollectionSource_6184f")

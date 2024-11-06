@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ylr1cu8crei0"
-path="res://.godot/imported/TX Plant.png-975582f13cd3ca24f56af749deefc004.ctex"
+uid="uid://du4nbsnpn04md"
+path="res://.godot/imported/box.png-90f8e91043850f3faf7b6777970e4a7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/old_tutorial_tilesets/TX Plant.png"
-dest_files=["res://.godot/imported/TX Plant.png-975582f13cd3ca24f56af749deefc004.ctex"]
+source_file="res://assets/objects/box.png"
+dest_files=["res://.godot/imported/box.png-90f8e91043850f3faf7b6777970e4a7e.ctex"]
 
 [params]
 
